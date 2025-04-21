@@ -12,7 +12,7 @@ const Projects: React.FC<{}> = () => {
         EXPLORE NOW
       </p>
       <div className=" container mx-auto 2xl  ">
-        <div className="flex-col flex md:flex-row  mt-7">
+        {/* <div className="flex-col flex md:flex-row  mt-7">
           <Link
             href="https://web.hr/"
             rel="noopener noreferrer"
@@ -104,7 +104,12 @@ const Projects: React.FC<{}> = () => {
               </div>
             </div>
           </Link>
-        </div>
+        </div> */}
+        {/* <div className="flex items-center justify-center gap-6 max-w-[600px] w-auto">
+          <p className="text-center animate-typing overflow-hidden whitespace-nowrap tracking-tighter text-xl bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500">
+            On Progress...
+          </p>
+        </div> */}
       </div>
     </section>
   );

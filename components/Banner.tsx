@@ -13,18 +13,18 @@ const Banner: React.FC<{}> = () => {
             src="/Me.png"
             height={250}
             width={250}
-            alt="Ibrahim Memon"
+            alt="Dimas"
           />
         </div>
 
-        <div className="flex flex-col gap-6 mt-10 cursor-pointer animate-bounce tracking-tighter text-7xl font-semibold text-white max-w-[600px] w-auto h-auto">
-          Ibrahim Memon!
+        <div className="flex flex-col gap-6 mt-10 cursor-pointer animate-bounce tracking-tighter text-4xl font-semibold text-white max-w-[600px] w-auto h-auto">
+          Dimas Ageng Saputro!
         </div>
         <div className="flex justify-center">
           <p className="text-2xl font-medium tracking-tighter  text-gray-300 max-w-[600px]">
-            I do Code &{" "}
+            Web {" "}
             <span className="text-transparent font-semibold  bg-clip-text bg-gradient-to-r from-purple-500 to-orange-400">
-              Chill
+              Developer
             </span>
           </p>
           <Image
@@ -36,12 +36,12 @@ const Banner: React.FC<{}> = () => {
         </div>
 
         <p className="text-md text-gray-200 my-5 max-w-[600px]">
-          Passionate Software Engineer with a focus on React Native development,
-          dedicated to crafting elegant and user-friendly mobile applications.
+          Passionate Backend Developer specializing in Go (Golang),
+          with a strong focus on building scalable and efficient systems using Microservices architecture.
         </p>
         <div className="text-md flex justify-center">
           <button
-            onClick={() => window.open("mailto:ibrahimmemon930@gmail.com")}
+            onClick={() => window.open("mailto:dimasageng58@gmail.com")}
             className=" z-[1]     padding-20  hover:bg-white rounded-3xl  text-white font-semibold hover:text-black py-3 px-10  border-[0.1px] border-white hover:border-transparent "
           >
             Contact Me

@@ -5,42 +5,45 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import StarsCanvas from "@/components/main/StarsBackground";
 import Navbar from "@/components/Navbar";
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ibiimemon.com/"),
-  title: "Ibrahim Memon - SWE | IXD | UX - Developer Portfolio",
+  metadataBase: new URL("https://dimasagengsaputro.my.id"),
+  title: "Dimas Ageng Saputro - Web Developer",
   description:
-    "Developer Portfolio of Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
+    "Dimas Ageng Saputro is a Backend Developer from Indonesia with 1+ years of expertise. Software Engineer. Specializing web development, Golang, and JavaScript technologies.",
   keywords: [
-    "Developer",
+    "Web Developer",
     "Portfolio",
-    "Developer Portflio",
-    "Ibrahim Memon",
-    "Ibrahim",
-    "IbiiMemon",
-    "IbrahimMemon",
-    "Ibrahim_Memon",
+    "PT Ihsan Solusi",
+    "Dimas Ageng Saputro",
+    "Dimas Ageng",
+    "Dimasageng",
+    "DimasAgengSaputro",
+    "Dimas_Ageng_Saputro",
     "Next.js",
-    "ReactNative",
-    "Android",
+    "Golang",
+    "React.Js",
+    "Profil lengkap dan portofolio Dimas Ageng Saputro."
   ],
   openGraph: {
-    title: "Ibrahim Memon - SWE | IXD | UX",
+    title: "Dimas Ageng Saputro",
     description:
-      "Frontend & Mobile App Developer from Pakistan with 3+ years of expertise. Senior Software Engineer. Specializing mobile apps, UX, and JavaScript technologies.",
+       "Web Developer of Backend Developer from Indonesia with 1+ years of expertise. Software Engineer. Specializing web development, Golang, and JavaScript technologies.",
     images: "/OpenGraph.jpg",
   },
   alternates: {
-    canonical: "https://ibiimemon.com/",
+    canonical: "https://dimasagengsaputro.my.id",
   },
 };
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+  }) {
   return (
     <html lang="en">
       <head>
@@ -50,12 +53,12 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "http://schema.org",
               "@type": "Person",
-              name: "Ibrahim Memon",
-              jobTitle: "Software Engineer",
-              url: "https://ibiimemon.com",
+              name: "Dimas Ageng Saputro",
+              jobTitle: "Web Developer",
+              url: "https://dimasagengsaputro.my.id",
               sameAs: [
-                "https://www.linkedin.com/in/ibrahimmemonn/",
-                "https://github.com/ibrahimmemonn",
+                "https://www.linkedin.com/in/dimasagengsaputro/",
+                "https://github.com/dimasagengsaputro",
               ],
             }),
           }}
@@ -79,6 +82,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-[#111] overflow-y-scroll overflow-x-hidden`}
       >
+        <GoogleAnalytics gaId={process.env.NEXT_PRIVATE_GTID ?? ""} />
         <SpeedInsights />
         <Analytics />
         <StarsCanvas />

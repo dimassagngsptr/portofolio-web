@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 
@@ -14,49 +15,51 @@ const Experience: React.FC<{}> = () => {
         <div className="md:flex md:flex-row md:justify-between pt-5">
           <div className="flex items-center gap-3">
             <Image
-              src={"/WebHR.svg"}
+              src={"/isi.jpg"}
               height={30}
               width={30}
               alt={"Ibrahim Memon - UX Experience"}
+              className="rounded-full"
             />
             <p className="text-gray-300 ">
-              <span className="font-semibold">WebHR /</span> Software Engineer
+              <span className="font-semibold cursor-pointer" onClick={()=>window.open("https://ihsansolusi.co.id/")}>PT Ihsan Solusi Informatika /</span> Backend Developer
             </p>
           </div>
           <p className="text-gray-300 md:pt-0 pt-3">
-            May 2022 - Present, United States
+            2024 - Present, Bandung
           </p>
         </div>
 
         <p className="text-gray-300 pt-5">
-          Currently, I am working on WebHR Mobile Application, WebHR is a Cloud
-          based Social HR Software for SMEs by Verge Systems Inc. WebHR is
-          currently used in over 160 countries world wide by thousands of
-          organizations to manage HR, As a React.js developer with 2.5 year of
-          experience, I have a strong foundation in creating dynamic and
-          responsive mobile and web applications.
+          Currently, I am working at PT Ihsan Solusi Informatika as a Backend Developer. 
+          Ihsan Solusi Informatika is a software house company that focuses on developing banking products 
+          and has over 20 years of experience in building 
+          Sharia banking systems. 
           <br />
           <br />
-          My experience with React Native has allowed me to develop
-          cross-platform mobile applications that run seamlessly on both iOS and
-          Android platforms. Additionally, my proficiency in React.js has
-          equipped me with the skills to create fast, scalable, and dynamic web
-          pages with excellent user experiences. I have a deep understanding of
-          component-based architecture and state management, and I am
-          well-versed in the latest web development trends and technologies.
+          In my role, I am responsible for developing and maintaining backend services using Golang,
+          implementing a microservices architecture to ensure the system is scalable, efficient,
+          and easy to maintain. I collaborate closely with cross-functional teams to design APIs,
+          handle database integrations, and ensure high performance and reliability of services across various environments.
         </p>
         <div className="flex-col flex sm:flex-row ">
           <div className="bg-transparent  mt-5 mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
-            React Native
+            Golang
           </div>
           <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
-            React
+            gRpc
           </div>
           <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
-            JavaScript
+            Microservices
           </div>
-          <div className="bg-transparent  mt-5 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
-            Typescript
+          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
+            GraphQL
+          </div>
+          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
+            Oracle
+          </div>
+          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
+            Docker
           </div>
         </div>
       </div>
