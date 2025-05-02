@@ -22,7 +22,7 @@ const Experience: React.FC<{}> = () => {
               className="rounded-full"
             />
             <p className="text-gray-300 ">
-              <span className="font-semibold cursor-pointer" onClick={()=>window.open("https://ihsansolusi.co.id/")}>PT Ihsan Solusi Informatika /</span> Backend Developer
+              <span className="font-semibold cursor-pointer" onClick={() => window.open("https://ihsansolusi.co.id/")}>PT Ihsan Solusi Informatika /</span> Backend Developer
             </p>
           </div>
           <p className="text-gray-300 md:pt-0 pt-3">
@@ -31,10 +31,10 @@ const Experience: React.FC<{}> = () => {
         </div>
 
         <p className="text-gray-300 pt-5">
-          Currently, I am working at PT Ihsan Solusi Informatika as a Backend Developer. 
-          Ihsan Solusi Informatika is a software house company that focuses on developing banking products 
-          and has over 20 years of experience in building 
-          Sharia banking systems. 
+          Currently, I am working at PT Ihsan Solusi Informatika as a Backend Developer.
+          Ihsan Solusi Informatika is a software house company that focuses on developing banking products
+          and has over 20 years of experience in building
+          Sharia banking systems.
           <br />
           <br />
           In my role, I am responsible for developing and maintaining backend services using Golang,
@@ -43,22 +43,22 @@ const Experience: React.FC<{}> = () => {
           handle database integrations, and ensure high performance and reliability of services across various environments.
         </p>
         <div className="flex-col flex sm:flex-row ">
-          <div className="bg-transparent  mt-5 mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
+          <div className="bg-transparent  mt-5 mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max hover:text-black hover:bg-gradient-to-r hover:from-white hover:to-black/50 transition duration-700">
             Golang
           </div>
-          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
+          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max  hover:text-black hover:bg-gradient-to-r hover:from-white hover:to-black/50 transition duration-700">
             gRpc
           </div>
-          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
+          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max  hover:text-black hover:bg-gradient-to-r hover:from-white hover:to-black/50 transition duration-700">
             Microservices
           </div>
-          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
+          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max  hover:text-black hover:bg-gradient-to-r hover:from-white hover:to-black/50 transition duration-700">
             GraphQL
           </div>
-          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
+          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max  hover:text-black hover:bg-gradient-to-r hover:from-white hover:to-black/50 transition duration-700">
             Oracle
           </div>
-          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max">
+          <div className="bg-transparent  mt-5  mr-2 cursor-pointer  rounded-3xl  text-white py-2 px-5  border border-[#2E2E2E] w-max  hover:text-black hover:bg-gradient-to-r hover:from-white hover:to-black/50 transition duration-700">
             Docker
           </div>
         </div>

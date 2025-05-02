@@ -12,17 +12,25 @@ const About: React.FC<{}> = () => {
         <p className=" tracking-[0.5em] text-transparent font-light pb-5  bg-clip-text bg-gradient-to-r from-purple-700 to-orange-500  text-1xl">
           EXPLORE NOW
         </p>
-        <p className="text-gray-300 text-center ">
-          As a passionate software engineer, I thrive on the intricate dance
-          between logic and creativity. Currently immersed in the dynamic world
-          of PT Ihsan Solusi Informatika, my expertise centers around Golang Backend Developer, where I seamlessly
-          blend technology with innovation.
-          <br />
-          <br />
-          With a fervor for crafting elegant solutions, I navigate the
-          ever-evolving landscape of software development. My journey involves
-          translating concepts into code, creating seamless user experiences,
-          and constantly pushing the boundaries of what&#39;s possible
+        <p className="text-gray-300 text-center text-justify">
+          Bachelor of Management (Finance) graduate from Widyatama University Bandung
+          with a strong interest and expertise in developing dynamic and responsive websites. As a
+          Backend Developer at PT Ihsan Solusi Informatika, Dimas was responsible for handling the POS
+          BDS project for PT. POS Indonesia Persero, demonstrating Dimas ability to build reliable and
+          integrated backend solutions.
+          <br/>
+          <br/>
+          Dimas possesses expertise in various technologies, including NodeJs, Golang, React.js, GoFiber,
+          Laravel, and Express.js. Over the past year, Dimas successfully completed a Web Developer
+          bootcamp that deepened understanding of the Software Development Life Cycle (SDLC), RESTful
+          APIs, and Object-Oriented Programming (OOP), while also enhancing his ability to collaborate
+          effectively within a team.
+          <br/>
+          <br/>
+          With a passion for learning the latest technologies, Dimas continuously hones skills to create
+          innovative solutions that deliver the best user experiences. Dimas commitment to quality work,
+          responsibility, and adaptability makes Dimas a valuable asset in supporting the needs of any
+          organization
         </p>
       </div>
     </section>
