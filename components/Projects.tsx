@@ -72,15 +72,31 @@ const Projects: React.FC<{}> = () => {
                           <Link
                             href={value?.repository}
                             target="_blank"
+                            className="z-[1]"
+                            rel="noopener noreferrer"
                           >
-                            <img src="/github.svg" alt="Repository" className="w-7 h-7" />
+                            <Image
+                              width={100}
+                              height={100}
+                              src="/Github.svg"
+                              alt="Repository"
+                              className="w-7 h-7"
+                            />
                           </Link>
                           <Link
                             href={value?.link}
                             target="_blank"
+                            rel="noopener noreferrer"
+                            className="z-[1]"
 
                           >
-                          <img src="/world.png" alt="Repository" className="w-8 h-8" />
+                            <Image
+                              width={100}
+                              height={100}
+                              src="/world.png"
+                              alt="Repository"
+                              className="w-8 h-8"
+                            />
                           </Link>
                         </div>
                       </div>
