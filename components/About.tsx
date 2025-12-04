@@ -13,18 +13,16 @@ const About: React.FC<{}> = () => {
           EXPLORE NOW
         </p>
         <p className="text-gray-300 text-center text-justify">
-          Bachelor of Management (Finance) graduate from Widyatama University Bandung
-          with a strong interest and expertise in developing dynamic and responsive websites. As a
-          Backend Developer at PT Ihsan Solusi Informatika, Dimas was responsible for handling the POS
-          BDS project for PT. POS Indonesia Persero, demonstrating Dimas ability to build reliable and
-          integrated backend solutions.
+          Bachelor of Management (Finance) graduate from Widyatama University Bandung with
+          more than one year of interest and experience as a Backend Developer at PT. Ihsan Solusi
+          Informatika, Dimas is responsible for handling projects for PT. POS Indonesia Persero,
+          demonstrating his ability in building reliable and integrated backend solutions.
           <br/>
           <br/>
-          Dimas possesses expertise in various technologies, including NodeJs, Golang, React.js, GoFiber,
-          Laravel, and Express.js. Over the past year, Dimas successfully completed a Web Developer
-          bootcamp that deepened understanding of the Software Development Life Cycle (SDLC), RESTful
-          APIs, and Object-Oriented Programming (OOP), while also enhancing his ability to collaborate
-          effectively within a team.
+          Dimas has expertise in various technologies, including Node.js, Golang, Python, Node.js, AWS,
+          and GCP. Over the past year, Dimas has successfully completed microservices-based backend
+          projects using gRPC, GraphQL, and RESTful API interfaces, while also improving his ability to
+          collaborate effectively within a team.
           <br/>
           <br/>
           With a passion for learning the latest technologies, Dimas continuously hones skills to create
