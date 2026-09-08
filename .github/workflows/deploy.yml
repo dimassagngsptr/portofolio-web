@@ -23,7 +23,7 @@ jobs:
             echo "==> Clone repository"
             rm -rf /var/www/portofolio-web
 
-            git clone git@github.com:${{ secrets.GITHUB_USERNAME }} /var/www/portofolio-web
+            git clone git@github.com:${{ secrets.USERNAME }} /var/www/portofolio-web
 
             echo "==> Check deployment"
             cd /var/www/portofolio-web
