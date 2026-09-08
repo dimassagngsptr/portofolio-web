@@ -1,4 +1,4 @@
-name: Deploy Portofolio Web
+name: deployment-portofolio-web
 
 on:
   push:
@@ -10,15 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: checkout-repository
         uses: actions/checkout@v4
 
-      - name: Set image tag
+      - name: set-image-tag
         id: image
         run: |
           echo "tag=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
 
-      - name: Build Docker image
+      - name: build-image
         run: |
           echo "========================================"
           echo "Building Docker image"
@@ -33,13 +33,13 @@ jobs:
           echo "Build completed"
           echo "========================================"
 
-      - name: Save Docker image
+      - name: save-image
         run: |
           docker save \
             portofolio-web:${{ steps.image.outputs.tag }} \
             -o portofolio-web.tar
 
-      - name: Upload image to VPS
+      - name: upload-image
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -48,7 +48,7 @@ jobs:
           source: "portofolio-web.tar"
           target: "/tmp"
 
-      - name: Deploy to K3s
+      - name: deploy-to-k3s
         uses: appleboy/ssh-action@v1.2.2
         env:
           IMAGE_TAG: ${{ steps.image.outputs.tag }}
