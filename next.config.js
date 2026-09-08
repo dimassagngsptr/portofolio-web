@@ -1,6 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    basePath: process.env.BASE_PATH || '/portofolio',
-}
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//     basePath: '/portofolio',
+// }
 
-module.exports = nextConfig
+module.exports = {
+     basePath: '/portofolio',
+}
