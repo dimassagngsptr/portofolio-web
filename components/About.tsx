@@ -14,8 +14,8 @@ const About: React.FC<{}> = () => {
         </p>
         <p className="text-gray-300 text-center text-justify">
           Bachelor of Management (Finance) graduate from Widyatama University Bandung with
-          more than one year of interest and experience as a Backend Developer at PT. Ihsan Solusi
-          Informatika, Dimas is responsible for handling projects for PT. POS Indonesia Persero,
+          more than one year of interest and experience as a Backend Developer at PT. Lawencon International,
+          Dimas is responsible for handling projects for PT. Permodalan Nasional Madani,
           demonstrating his ability in building reliable and integrated backend solutions.
           <br/>
           <br/>
