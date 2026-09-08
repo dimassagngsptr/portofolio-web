@@ -1,36 +1,33 @@
-name: Test SSH to VPS
+name: Deploy Next.js
 
 on:
   workflow_dispatch:
 
 jobs:
-  test-ssh:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Test SSH connection
+      - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.2.2
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            echo "================================"
-            echo "SSH Connection Successful"
-            echo "================================"
+            set -e
 
-            echo "Hostname:"
-            hostname
+            echo "==> Prepare directory"
+            mkdir -p /var/www
 
-            echo "User:"
-            whoami
+            echo "==> Clone repository"
+            rm -rf /var/www/portofolio-web
 
-            echo "Current directory:"
-            pwd
+            git clone git@github.com:${{ secrets.USERNAME }} /var/www/portofolio-web
 
-            echo "Node version:"
-            node -v
+            echo "==> Check deployment"
+            cd /var/www/portofolio-web
 
-            echo "NPM version:"
-            npm -v
+            git rev-parse --short HEAD
 
+            echo "==> Clone successful!"
