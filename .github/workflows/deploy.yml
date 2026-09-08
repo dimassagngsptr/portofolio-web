@@ -1,33 +1,78 @@
-name: Deploy Next.js
+name: Deploy Portofolio Web
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - release
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Deploy to VPS
-        uses: appleboy/ssh-action@v1.2.2
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set image tag
+        id: image
+        run: |
+          echo "tag=${GITHUB_SHA::7}" >> "$GITHUB_OUTPUT"
+
+      - name: Build Docker image
+        run: |
+          echo "========================================"
+          echo "Building Docker image"
+          echo "Image: portofolio-web:${{ steps.image.outputs.tag }}"
+          echo "========================================"
+
+          docker build \
+            -t portofolio-web:${{ steps.image.outputs.tag }} \
+            .
+
+          echo "========================================"
+          echo "Build completed"
+          echo "========================================"
+
+      - name: Save Docker image
+        run: |
+          docker save \
+            portofolio-web:${{ steps.image.outputs.tag }} \
+            -o portofolio-web.tar
+
+      - name: Upload image to VPS
+        uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
+          source: "portofolio-web.tar"
+          target: "/tmp"
+
+      - name: Deploy to K3s
+        uses: appleboy/ssh-action@v1.2.2
+        env:
+          IMAGE_TAG: ${{ steps.image.outputs.tag }}
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          envs: IMAGE_TAG
           script: |
             set -e
 
-            echo "==> Prepare directory"
-            mkdir -p /var/www
+            echo "Import image to K3s..."
+            k3s ctr images import /tmp/portofolio-web.tar
 
-            echo "==> Clone repository"
-            rm -rf /var/www/portofolio-web
+            echo "Update deployment..."
+            kubectl set image deployment/portofolio-web \
+              portofolio-web=portofolio-web:${IMAGE_TAG}
 
-            git clone git@github.com:${{ secrets.USERNAME }} /var/www/portofolio-web
+            echo "Waiting for rollout..."
+            kubectl rollout status deployment/portofolio-web \
+              --timeout=180s
 
-            echo "==> Check deployment"
-            cd /var/www/portofolio-web
+            echo "Deployment successful!"
 
-            git rev-parse --short HEAD
+            kubectl get pods -l app=portofolio-web
 
-            echo "==> Clone successful!"
+            rm -f /tmp/portofolio-web.tar
