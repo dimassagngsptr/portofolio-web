@@ -13,22 +13,13 @@ const About: React.FC<{}> = () => {
           EXPLORE NOW
         </p>
         <p className="text-gray-300 text-center text-justify">
-          Bachelor of Management (Finance) graduate from Widyatama University Bandung with
-          more than one year of interest and experience as a Backend Developer at PT. Lawencon International,
-          Dimas is responsible for handling projects for PT. Permodalan Nasional Madani,
-          demonstrating his ability in building reliable and integrated backend solutions.
+          As Backend Developer with over 2 years of professional experience, specializing in Golang and the development of reliable, scalable, and maintainable backend systems. Experienced in building microservices architectures, RESTful APIs, GraphQL, and gRPC-based services, as well as integrating databases and external services to support business requirements.
           <br/>
           <br/>
-          Dimas has expertise in various technologies, including Node.js, Golang, Python, Node.js, AWS,
-          and GCP. Over the past year, Dimas has successfully completed microservices-based backend
-          projects using gRPC, GraphQL, and RESTful API interfaces, while also improving his ability to
-          collaborate effectively within a team.
+          Proficient in Golang, SQL, GORM, Microsoft SQL Server, Oracle, Elastic Search, Redis, and Firebase Cloud Messaging (FCM), with hands-on experience in database optimization, asynchronous processing, system integration, and application performance monitoring. Familiar with technologies such as Node.js, Python, AWS, and GCP.
           <br/>
           <br/>
-          With a passion for learning the latest technologies, Dimas continuously hones skills to create
-          innovative solutions that deliver the best user experiences. Dimas commitment to quality work,
-          responsibility, and adaptability makes Dimas a valuable asset in supporting the needs of any
-          organization
+          Demonstrates strong problem-solving skills, adaptability, and a commitment to writing clean, efficient, and maintainable code. Passionate about continuously improving technical expertise and delivering reliable backend solutions that support business objectives.
         </p>
       </div>
     </section>
